@@ -7,7 +7,7 @@ def scan_finger(ipaddr,port):
     """
     port = str(port)
     nm = nmap.PortScanner()
-    scan_port_finger_results = nm.scan(ipaddr, port, '-T5 -O -sS -sU')
+    scan_port_finger_results = nm.scan(ipaddr, port, '-T4 -O -sS -sU')
     # print(scan_port_finger_results)
     #获取端口状态
     port2 = int(port)
@@ -35,4 +35,4 @@ def scan_finger(ipaddr,port):
         return return_str
 
 if __name__ == '__main__':
-    scan_finger('127.0.0.1',8188)
+    scan_finger('122.112.197.24',8188)
